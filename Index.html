@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Persebaran Titik Fasilitas Pendidikan di Kota Serang</title>
+
+  <!-- Link ke Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Link ke Leaflet dan Leaflet.Heat CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.css" />
+
+  <!-- Link ke heatmap.js -->
+  <script src="https://unpkg.com/heatmap.js/build/heatmap.min.js"></script>
+
+  <style>
+    #map {
+      height: 80vh;
+    }
+
+    .legend {
+      background-color: white;
+      padding: 12px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .legend i {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 8px;
+    }
+
+    .leaflet-control-layers {
+      background: rgba(255, 255, 255, 0.8); /* Set a slight transparency for layer control */
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .legend {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      z-index: 999;
+    }
+
+    /* Custom toggle button styling */
+    .leaflet-control-layers-toggle {
+      background-color: #4CAF50;
+      border-radius: 50%;
+      padding: 10px;
+      color: white;
+      border: none;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .leaflet-control-layers-toggle:hover {
+      transform: scale(1.1);
+      background-color: #45a049;
+    }
+
+    .leaflet-control-layers-toggle:focus {
+      outline: none;
+    }
+
+    /* Custom layer control container */
+    .leaflet-control-layers {
+      padding: 10px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    .leaflet-control-layers label {
+      font-size: 14px;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <!-- Header -->
+  <header class="bg-gray-800 text-white py-6">
+    <h1 class="text-center text-3xl font-semibold">Persebaran Titik Fasilitas Pendidikan di Kota Serang</h1>
+  </header>
+
+  <!-- Container -->
+  <div class="container mx-auto mt-6 p-4">
+    <div id="map" class="rounded-lg shadow-lg"></div>
+  </div>
+
+  <!-- Link ke Leaflet dan Bootstrap JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
+
+  <script>
+    // Inisialisasi peta dengan CRS default (EPSG:4326)
+    const map = L.map('map').setView([-6.11, 106.15], 11); // Fokus awal di Kota Serang
+
+    // Tambahkan tile layer (OpenStreetMap)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Objek untuk menyimpan layer
+    const layers = {};
+
+    // Layer control untuk mengatur visibilitas
+    const pointLayerControl = L.control.layers(null, null, { collapsed: false }).addTo(map);
+    const heatmapLayerControl = L.control.layers(null, null, { collapsed: false }).addTo(map);
+
+    // Function to load GeoJSON with heatmap and return a promise
+    // Function to load GeoJSON with heatmap and return a promise
+    function loadGeoJSONWithHeatmap(url, layerName, styleOptions) {
+      return fetch(url)
+        .then(response => {
+          if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+          return response.json();
+        })
+        .then(data => {
+          // Prepare array for heatmap data
+          const heatData = [];
+
+          // Extract coordinates for heatmap (lat, lng)
+          data.features.forEach(feature => {
+            if (feature.geometry && feature.geometry.type === "Point") {
+              const coords = feature.geometry.coordinates;
+              heatData.push({ lat: coords[1], lng: coords[0], value: 1 });
+            }
+          });
+
+          // Create heatmap with default colors
+          const heatmapLayer = L.heatLayer(heatData, {
+            radius: 50,      // Mengurangi radius agar titiknya lebih kecil
+            blur: 15,        // Menambah blur agar transisi warna lebih halus
+            maxZoom: 18,
+            max: 0.1         // Menurunkan nilai maksimum agar intensitas heatmap lebih rendah
+          }).addTo(map);
+
+          // Save heatmap layer for reference
+          layers[layerName] = heatmapLayer;
+
+          // Add GeoJSON points layer to map
+          const geoJsonLayer = L.geoJSON(data, {
+            pointToLayer: function (feature, latlng) {
+              return L.circleMarker(latlng, { ...styleOptions, radius: 5 });
+            },
+            onEachFeature: (feature, layer) => {
+              if (feature.properties) {
+                layer.bindPopup(
+                  `<strong>${layerName}</strong><br>` +
+                  Object.entries(feature.properties)
+                    .map(([key, value]) => `<strong>${key}:</strong> ${value}`)
+                    .join('<br>')
+                );
+              }
+            }
+          }).addTo(map);
+
+          // Save GeoJSON layer for reference
+          layers[layerName + ' Points'] = geoJsonLayer;
+
+          // Add point layer and heatmap to controls
+          pointLayerControl.addOverlay(geoJsonLayer, layerName);
+          heatmapLayerControl.addOverlay(heatmapLayer, layerName + ' Heatmap');
+        });
+    }
+
+
+    // Load all GeoJSON files for heatmap and points using Promise.all
+    Promise.all([
+      loadGeoJSONWithHeatmap('Pendidikan Usia Dini.geojson', 'Pendidikan Usia Dini', { color: 'green', weight: 2, fillOpacity: 1 }),
+      loadGeoJSONWithHeatmap('Pendidikan Dasar.geojson', 'Pendidikan Dasar', { color: 'orange', weight: 2, fillOpacity: 1 }),
+      loadGeoJSONWithHeatmap('Pendidikan Menengah Pertama.geojson', 'Pendidikan Menengah Pertama', { color: 'red', weight: 2, fillOpacity: 1 }),
+      loadGeoJSONWithHeatmap('Pendidikan Menengah Atas.geojson', 'Pendidikan Menengah Atas', { color: 'purple', weight: 2, fillOpacity: 1 }),
+      loadGeoJSONWithHeatmap('Pendidikan Tinggi.geojson', 'Pendidikan Tinggi', { color: 'blue', weight: 2, fillOpacity: 1 }),
+      loadGeoJSONWithHeatmap('Yayasan.geojson', 'Yayasan', { color: 'brown', weight: 2, fillOpacity: 1 })
+    ]).then(() => {
+      // Setelah semua heatmap dimuat, muat layer Kota Serang
+      return fetch('Kota Serang.geojson');
+    }).then(response => {
+      if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+      return response.json();
+    }).then(data => {
+      // Menambahkan layer Kota Serang sebagai border biru
+      const geoJsonLayer = L.geoJSON(data, {
+        style: { 
+          color: 'blue',       // Warna border biru
+          weight: 3,           // Ketebalan border
+          fillOpacity: 0       // Tidak ada pengisian area, hanya border
+        }
+      }).addTo(map);
+
+      // Pastikan layer ini berada di belakang
+      geoJsonLayer.bringToBack();
+
+      layers['Kota Serang'] = geoJsonLayer;
+    }).catch(error => console.error('Error loading data:', error));
+
+    // Menambahkan legenda
+    const legend = L.control({ position: 'bottomright' });
+
+    legend.onAdd = function() {
+      const div = L.DomUtil.create('div', 'legend');
+      const grades = ['green', 'orange', 'red', 'purple', 'blue', 'brown'];
+      const labels = ['Pendidikan Usia Dini', 'Pendidikan Dasar', 'Pendidikan Menengah Pertama', 'Pendidikan Menengah Atas', 'Pendidikan Tinggi', 'Yayasan'];
+
+      for (let i = 0; i < grades.length; i++) {
+        div.innerHTML +=
+          '<i style="background:' + grades[i] + '"></i> ' +
+          labels[i] + '<br>';
+      }
+
+      return div;
+    };
+
+    legend.addTo(map);
+  </script>
+
+</body>
+</html>

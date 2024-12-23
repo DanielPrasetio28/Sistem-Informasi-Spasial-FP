@@ -1,0 +1,14 @@
+{
+"type": "FeatureCollection",
+"name": "Pendidikan Tinggi",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "fid": 1, "NAMOBJ": "Universitas Pendidikan Indonesia Kampus Serang", "JENJANG": "Pendidikan Tinggi" }, "geometry": { "type": "Point", "coordinates": [ 106.146675902000084, -6.125426412999964, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 2, "NAMOBJ": "Universitas Serang Raya", "JENJANG": "Pendidikan Tinggi" }, "geometry": { "type": "Point", "coordinates": [ 106.132113068000081, -6.088419923999943, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 3, "NAMOBJ": "Sekolah Tinggi Keguruan dan Ilmu Pendidikan Banten", "JENJANG": "Pendidikan Tinggi" }, "geometry": { "type": "Point", "coordinates": [ 106.131513552000072, -6.095539245999936, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 4, "NAMOBJ": "Sekolah Tinggi Ilmu Manajemen Prima Graha Banten", "JENJANG": "Pendidikan Tinggi" }, "geometry": { "type": "Point", "coordinates": [ 106.141736695000091, -6.114357419999974, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 5, "NAMOBJ": "Akademi Kebidanan Bhakti Purna Husada", "JENJANG": "Pendidikan Tinggi" }, "geometry": { "type": "Point", "coordinates": [ 106.134939984000084, -6.113603031999957, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 6, "NAMOBJ": "Sekolah Tinggi Keguruan dan Ilmu Pendidikan Al Azhar Banten", "JENJANG": "Pendidikan Tinggi" }, "geometry": { "type": "Point", "coordinates": [ 106.149196732000064, -6.12107061899997, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 7, "NAMOBJ": "Islamic Boarding School Daar Al Ilmi", "JENJANG": "Pendidikan Tinggi" }, "geometry": { "type": "Point", "coordinates": [ 106.14228612300009, -6.12203504299992, 0.0 ] } }
+]
+}

@@ -1,0 +1,26 @@
+{
+"type": "FeatureCollection",
+"name": "Pendidikan Menengah Pertama",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "fid": 1, "NAMOBJ": "Madrasah Tsanawiyah Al Battani Sepang", "JENJANG": "Pendidikan Menengah Pertama" }, "geometry": { "type": "Point", "coordinates": [ 106.131505483000069, -6.138971174999938, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 2, "NAMOBJ": "SMP Negeri 23 Cipocokjaya", "JENJANG": "Pendidikan Menengah Pertama" }, "geometry": { "type": "Point", "coordinates": [ 106.14379799700005, -6.148794506999927, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 3, "NAMOBJ": "Madrasah Tsanawiyah Al Battani Sepang", "JENJANG": "Pendidikan Menengah Pertama" }, "geometry": { "type": "Point", "coordinates": [ 106.131903240000042, -6.139042689999939, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 4, "NAMOBJ": "SMP Islam Pariskian", "JENJANG": "Pendidikan Menengah Pertama" }, "geometry": { "type": "Point", "coordinates": [ 106.143672550000076, -6.128109998999937, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 5, "NAMOBJ": "Madrasah Aliyah, SMP Darunajah", "JENJANG": "Pendidikan Menengah Pertama" }, "geometry": { "type": "Point", "coordinates": [ 106.107377292000081, -6.12990466899992, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 6, "NAMOBJ": "SMP Negeri Satu Atap Sayar Kota", "JENJANG": "Pendidikan Menengah Pertama" }, "geometry": { "type": "Point", "coordinates": [ 106.096207373000084, -6.164785683999981, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 7, "NAMOBJ": "SMP Shohibul Barokah Kasemen", "JENJANG": "Pendidikan Menengah Pertama" }, "geometry": { "type": "Point", "coordinates": [ 106.160026634000076, -6.047371081999932, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 8, "NAMOBJ": "SMP Negeri 5 Kota Serang", "JENJANG": "Pendidikan Menengah Pertama" }, "geometry": { "type": "Point", "coordinates": [ 106.16053209100005, -6.072513641999935, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 9, "NAMOBJ": "SMP Negeri 16 Kota Serang", "JENJANG": "Pendidikan Menengah Pertama" }, "geometry": { "type": "Point", "coordinates": [ 106.198140901000045, -6.090719326999941, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 10, "NAMOBJ": "SMP Negeri 3 Kota serang", "JENJANG": "Pendidikan Menengah Pertama" }, "geometry": { "type": "Point", "coordinates": [ 106.153237803000081, -6.105089398999945, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 11, "NAMOBJ": "SMP Islam Terpadu Al llzzah", "JENJANG": "Pendidikan Menengah Pertama" }, "geometry": { "type": "Point", "coordinates": [ 106.157843510000077, -6.09546523799998, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 12, "NAMOBJ": "SMP Negeri 6 Kota Serang", "JENJANG": "Pendidikan Menengah Pertama" }, "geometry": { "type": "Point", "coordinates": [ 106.129820201000086, -6.111045166999928, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 13, "NAMOBJ": "Akademi Manajemen Informatika dan Komputer, SMK, SMA, SMP Muhammadiyah", "JENJANG": "Pendidikan Menengah Pertama" }, "geometry": { "type": "Point", "coordinates": [ 106.144400848000032, -6.122157160999962, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 14, "NAMOBJ": "SMP Negeri 14 Serang", "JENJANG": "Pendidikan Menengah Pertama" }, "geometry": { "type": "Point", "coordinates": [ 106.146273117000078, -6.114510562999961, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 15, "NAMOBJ": "SMP Negeri 13 Serang", "JENJANG": "Pendidikan Menengah Pertama" }, "geometry": { "type": "Point", "coordinates": [ 106.146084343000055, -6.114972234999932, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 16, "NAMOBJ": "SMP Kristen & Gereja Penabur", "JENJANG": "Pendidikan Menengah Pertama" }, "geometry": { "type": "Point", "coordinates": [ 106.153205039000056, -6.115110754999924, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 17, "NAMOBJ": "SMP Islam 11 Al Azhar", "JENJANG": "Pendidikan Menengah Pertama" }, "geometry": { "type": "Point", "coordinates": [ 106.148564282000052, -6.121108149999936, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 18, "NAMOBJ": "SMP Negeri 2 Kota Serang", "JENJANG": "Pendidikan Menengah Pertama" }, "geometry": { "type": "Point", "coordinates": [ 106.152824959000043, -6.119064008999941, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 19, "NAMOBJ": "SMP Khairul Huda", "JENJANG": "Pendidikan Menengah Pertama" }, "geometry": { "type": "Point", "coordinates": [ 106.14553795900008, -6.117234525999956, 0.0 ] } }
+]
+}

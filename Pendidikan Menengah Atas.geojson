@@ -1,0 +1,23 @@
+{
+"type": "FeatureCollection",
+"name": "Pendidikan Menengah Atas",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "fid": 1, "NAMOBJ": "SMK Negeri 4 Serang", "JENJANG": "Pendidikan Menengah Atas" }, "geometry": { "type": "Point", "coordinates": [ 106.191284723000095, -6.197168419999966, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 2, "NAMOBJ": "SMK Alfalah Madani", "JENJANG": "Pendidikan Menengah Atas" }, "geometry": { "type": "Point", "coordinates": [ 106.152555478000068, -6.191085694999977, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 3, "NAMOBJ": "SMK Lebakwangi", "JENJANG": "Pendidikan Menengah Atas" }, "geometry": { "type": "Point", "coordinates": [ 106.21785219700007, -6.176532402999955, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 4, "NAMOBJ": "SMK PGRI 3 Serang", "JENJANG": "Pendidikan Menengah Atas" }, "geometry": { "type": "Point", "coordinates": [ 106.14878286000004, -6.126136419999971, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 5, "NAMOBJ": "SMA Negeri 4 Kota Serang", "JENJANG": "Pendidikan Menengah Atas" }, "geometry": { "type": "Point", "coordinates": [ 106.156154338000093, -6.070325205999954, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 6, "NAMOBJ": "SMK Negeri Pertanian Serang", "JENJANG": "Pendidikan Menengah Atas" }, "geometry": { "type": "Point", "coordinates": [ 106.134093028000052, -6.097577890999956, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 7, "NAMOBJ": "SMK Pariwista YCP", "JENJANG": "Pendidikan Menengah Atas" }, "geometry": { "type": "Point", "coordinates": [ 106.154362978000051, -6.090398747999927, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 8, "NAMOBJ": "SMK Pasundan 2 Kota Serang", "JENJANG": "Pendidikan Menengah Atas" }, "geometry": { "type": "Point", "coordinates": [ 106.142129426000054, -6.112068322999955, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 9, "NAMOBJ": "SMK Kimia PGRI", "JENJANG": "Pendidikan Menengah Atas" }, "geometry": { "type": "Point", "coordinates": [ 106.140992847000064, -6.112993276999933, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 10, "NAMOBJ": "SMA Negeri 3 Kota Serang", "JENJANG": "Pendidikan Menengah Atas" }, "geometry": { "type": "Point", "coordinates": [ 106.135464931000058, -6.114008927999976, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 11, "NAMOBJ": "SMK Informatika Serang", "JENJANG": "Pendidikan Menengah Atas" }, "geometry": { "type": "Point", "coordinates": [ 106.144632776000037, -6.11649480599994, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 12, "NAMOBJ": "SMK 17 Rachmatoellah Sidik", "JENJANG": "Pendidikan Menengah Atas" }, "geometry": { "type": "Point", "coordinates": [ 106.143213176000074, -6.116054647999931, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 13, "NAMOBJ": "Madrasah Aliyah Negeri 1 Kota Serang", "JENJANG": "Pendidikan Menengah Atas" }, "geometry": { "type": "Point", "coordinates": [ 106.142023652000034, -6.121836622999981, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 14, "NAMOBJ": "SMK Kesehatan Husada Permata Bu", "JENJANG": "Pendidikan Menengah Atas" }, "geometry": { "type": "Point", "coordinates": [ 106.155116213000042, -6.117241144999985, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 15, "NAMOBJ": "SMA Mardi Yuana", "JENJANG": "Pendidikan Menengah Atas" }, "geometry": { "type": "Point", "coordinates": [ 106.151202976000036, -6.116951078999938, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 16, "NAMOBJ": "SMK Negeri 5 Kota Serang", "JENJANG": "Pendidikan Menengah Atas" }, "geometry": { "type": "Point", "coordinates": [ 106.089829030000033, -6.121248707999932, 0.0 ] } }
+]
+}

@@ -1,0 +1,17 @@
+{
+"type": "FeatureCollection",
+"name": "Yayasan",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "fid": 1, "NAMOBJ": "Yayasan Darulyaqin", "JENJANG": "Yayasan" }, "geometry": { "type": "Point", "coordinates": [ 106.160553367000034, -6.145321490999948, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 2, "NAMOBJ": "Yayasan Pendidikan Islam Nurur Rahman", "JENJANG": "Yayasan" }, "geometry": { "type": "Point", "coordinates": [ 106.133530868000037, -6.135267674999961, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 3, "NAMOBJ": "Pondok Pesantren Hidayatullah", "JENJANG": "Yayasan" }, "geometry": { "type": "Point", "coordinates": [ 106.130454966000059, -6.137888049999964, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 4, "NAMOBJ": "Yayasan Pendidikan Islam At Tauhidiyah", "JENJANG": "Yayasan" }, "geometry": { "type": "Point", "coordinates": [ 106.19137158500007, -6.106308715999943, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 5, "NAMOBJ": "Yayasan Manbaul Ulum", "JENJANG": "Yayasan" }, "geometry": { "type": "Point", "coordinates": [ 106.147529853000037, -6.106367830999942, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 6, "NAMOBJ": "Yayasan Pendidikan Islam Al Izzah", "JENJANG": "Yayasan" }, "geometry": { "type": "Point", "coordinates": [ 106.159020609000052, -6.096611354999943, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 7, "NAMOBJ": "Yayasan Nurul Islam", "JENJANG": "Yayasan" }, "geometry": { "type": "Point", "coordinates": [ 106.155327951000075, -6.102208771999932, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 8, "NAMOBJ": "Pondok Pesantren Al Muawanah", "JENJANG": "Yayasan" }, "geometry": { "type": "Point", "coordinates": [ 106.153146123000056, -6.066324912999953, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 9, "NAMOBJ": "Yayasan Pendidikan Islam Al Aziz", "JENJANG": "Yayasan" }, "geometry": { "type": "Point", "coordinates": [ 106.136016658000074, -6.122817135999983, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 10, "NAMOBJ": "Yayasan Pendidikan Islam Nurul Ihsan", "JENJANG": "Yayasan" }, "geometry": { "type": "Point", "coordinates": [ 106.122557775000089, -6.116604703999943, 0.0 ] } }
+]
+}
