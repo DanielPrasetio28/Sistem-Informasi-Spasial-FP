@@ -1,0 +1,12 @@
+{
+"type": "FeatureCollection",
+"name": "Pendidikan Usia Dini",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::32748" } },
+"features": [
+{ "type": "Feature", "properties": { "fid": 1, "NAMOBJ": "TK Khalifah", "JENJANG": "Pendidikan Usia Dini" }, "geometry": { "type": "Point", "coordinates": [ 627169.000055298092775, 9322594.000051351264119, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 2, "NAMOBJ": "TK Al Izzah", "JENJANG": "Pendidikan Usia Dini" }, "geometry": { "type": "Point", "coordinates": [ 628111.999981836415827, 9326115.000020261853933, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 3, "NAMOBJ": "Madrasah Aliyah, SMP, TK Ihsaniyah", "JENJANG": "Pendidikan Usia Dini" }, "geometry": { "type": "Point", "coordinates": [ 627227.999983616871759, 9324241.000017838552594, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 4, "NAMOBJ": "SD, TK Islam Terpadu Namira", "JENJANG": "Pendidikan Usia Dini" }, "geometry": { "type": "Point", "coordinates": [ 626617.000051958020777, 9323173.000039126724005, 0.0 ] } },
+{ "type": "Feature", "properties": { "fid": 5, "NAMOBJ": "TK Pertiwi", "JENJANG": "Pendidikan Usia Dini" }, "geometry": { "type": "Point", "coordinates": [ 627380.000022327993065, 9323601.999975761398673, 0.0 ] } }
+]
+}
